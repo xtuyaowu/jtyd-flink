@@ -38,7 +38,7 @@ public class ReadKafkaAndHBaseToKafka {
         // kafka消费者配置
         //{"id":"1","name":"Sun WuKong","amount":666,"massage_timestamp":"1574423920282"}
         Properties consumerProp = new Properties();
-        String consumerBootstrapServers = "master.northking.com:9092,slave1.northking.com:9092,slave2.northking.com:9092";
+        String consumerBootstrapServers = "master.beijing.com:9092,slave1.beijing.com:9092,slave2.beijing.com:9092";
         String groupId = jobname;
         String consumerTopic = "test";
         consumerProp.setProperty("bootstrap.servers", consumerBootstrapServers);
@@ -46,7 +46,7 @@ public class ReadKafkaAndHBaseToKafka {
 
         // kafka生产者配置
         Properties producerProp = new Properties();
-        String producerBootstrapServers = "master.northking.com:9092,slave1.northking.com:9092,slave2.northking.com:9092";
+        String producerBootstrapServers = "master.beijing.com:9092,slave1.beijing.com:9092,slave2.beijing.com:9092";
         String producerTopic = "PRODUCER_SSMX";
         producerProp.setProperty("bootstrap.servers", producerBootstrapServers);
         producerProp.setProperty(ProducerConfig.TRANSACTION_TIMEOUT_CONFIG, "10000");
